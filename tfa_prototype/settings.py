@@ -102,6 +102,8 @@ LOGIN_URL = reverse_lazy('two_factor:login')
 
 TWO_FACTOR_SMS_GATEWAY = 'two_factor.gateways.fake.Fake'
 
+TWO_FACTOR_PATCH_ADMIN = True
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
