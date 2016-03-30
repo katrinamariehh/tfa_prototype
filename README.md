@@ -29,7 +29,7 @@ Scan the code with an app like Google Authenticator to link your account with th
 
 Once setup is completed, visit /logout to log the user out, then attempt to visit /books/ to prompt a login.
 
-After entering the username and password it will prompt you for the toekn from your token generator.
+After entering the username and password it will prompt you for the token from your token generator.
 <insert image here>
 
 You should see a list of books!
@@ -44,4 +44,3 @@ Enter your phone number (include the +1 country code).
 A fake SMS backend is setup in the project, codes will be logged to the output viewable in the shell where you ran `python manage.py runserver`.
 
 To confirm behavior, visit /logout, attemtp to visit /books/ and complete the login process as the sms user.
-
