@@ -19,6 +19,12 @@ With your django server running, visit `localhost:8000/books/` a view that will 
 ### Testing one-time-use tokens with Google Authenticator (or another QR code-based token generator)
 When prompted to do so, login with username: test_otp and password: password.
 
+You should see a message that you need to enable two-factor authentication.
+
+![two-factor auth message](https://raw.githubusercontent.com/katrinamariehh/tfa_prototype/master/screenshots/permission_denied.png)
+
+Next you will get a prompt to start the two-factor auth setup wizard.
+
 Select the option to setup a Token generator.
 
 ![select token generator](https://raw.githubusercontent.com/katrinamariehh/tfa_prototype/master/screenshots/select_token_generator.png)
