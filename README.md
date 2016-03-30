@@ -23,11 +23,7 @@ Select the option to setup a Token generator.
 
 ![select token generator](https://raw.githubusercontent.com/katrinamariehh/tfa_prototype/master/screenshots/select_token_generator.png)
 
-You'll see a QR code like this
-
-![qr code](https://raw.githubusercontent.com/katrinamariehh/tfa_prototype/master/screenshots/qr_code.png)
-
-Scan the code with an app like Google Authenticator to link your account with the app and enter the 6-digit token that should show up in your app.
+You'll see a QR code to scan with an app like Google Authenticator, this will link your account with the app.  When prompted, enter the 6-digit token that should show up in your app.
 
 Once setup is completed, visit /logout to log the user out, then attempt to visit /books/ to prompt a login.
 
