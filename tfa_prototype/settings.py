@@ -28,10 +28,17 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+TEMPLATE_DIRS = (
+    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    os.path.join(BASE_DIR, 'templates').replace('\\','/'),
+)
 
 # Application definition
 
 INSTALLED_APPS = (
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,6 +49,7 @@ INSTALLED_APPS = (
     'django_otp.plugins.otp_static',
     'django_otp.plugins.otp_totp',
     'two_factor',
+    'books'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -56,9 +64,9 @@ MIDDLEWARE_CLASSES = (
     'django_otp.middleware.OTPMiddleware',
 )
 
-ROOT_URLCONF = 'two_factor_auth.urls'
+ROOT_URLCONF = 'tfa_prototype.urls'
 
-WSGI_APPLICATION = 'two_factor_auth.wsgi.application'
+WSGI_APPLICATION = 'tfa_prototype.wsgi.application'
 
 
 # Database
