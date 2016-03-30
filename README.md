@@ -19,18 +19,17 @@ With your django server running, visit `localhost:8000/books/` a view that will 
 ### Testing one-time-use tokens with Google Authenticator (or another QR code-based token generator)
 When prompted to do so, login with username: test_otp and password: password.
 
-Select the option to setup Token Generator.
-<insert image here>
+Select the option to setup a Token generator.
 
-You'll see a QR code like this
-<insert image here>
+![select token generator](https://raw.githubusercontent.com/katrinamariehh/tfa_prototype/master/screenshots/select_token_generator.png)
 
-Scan the code with an app like Google Authenticator to link your account with the app and enter the 6-digit token that should show up on the screen.
+You'll see a QR code to scan with an app like Google Authenticator, this will link your account with the app.  When prompted, enter the 6-digit token that should show up in your app.
 
 Once setup is completed, visit /logout to log the user out, then attempt to visit /books/ to prompt a login.
 
 After entering the username and password it will prompt you for the token from your token generator.
-<insert image here>
+
+![enter token](https://raw.githubusercontent.com/katrinamariehh/tfa_prototype/master/screenshots/enter_token_from_generator.png)
 
 You should see a list of books!
 
@@ -39,8 +38,13 @@ When prompted to do so, login with username: test_sms and password: password.
 
 Select the option to setup authentication with Text message.
 
+![select text message](https://raw.githubusercontent.com/katrinamariehh/tfa_prototype/master/screenshots/select_text_message.png)
+
 Enter your phone number (include the +1 country code).
+![enter phone number] (https://raw.githubusercontent.com/katrinamariehh/tfa_prototype/master/screenshots/enter_phone_number.png)
 
 A fake SMS backend is setup in the project, codes will be logged to the output viewable in the shell where you ran `python manage.py runserver`.
+
+![log output](https://raw.githubusercontent.com/katrinamariehh/tfa_prototype/master/screenshots/log_output.png)
 
 To confirm behavior, visit /logout, attemtp to visit /books/ and complete the login process as the sms user.
